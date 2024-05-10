@@ -1,5 +1,5 @@
 ---
-- name: 3.5 Challenge 2
+- name: "3.5 Challenge 2"
   hosts: all
   gather_facts: true
   tasks: 
@@ -33,4 +33,9 @@
         scope: user
         name: poc
         state: started
+
+    - name: Print debug info 
+      ansible.builtin.shell: |
+        journalctl --user --no-pager -xeu poc
+      when: service.debug is defined
 
