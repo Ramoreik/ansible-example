@@ -1,3 +1,5 @@
 ---
 - name: 3.5 Challenge 3
+  gather_facts: true
+  hosts: all
   tasks: []
