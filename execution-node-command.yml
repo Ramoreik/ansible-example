@@ -1,7 +1,7 @@
 ---
 
 - name: "Execution node command execution"
-  gather_facts: false
+  gather_facts: true
   hosts: all
   tasks:
     - ansible.builtin.shell: "{{ code }}"

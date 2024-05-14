@@ -1,7 +1,7 @@
 ---
 
 - name: "Execution node python script execution"
-  gather_facts: false
+  gather_facts: true
   hosts: all
   tasks:
     - ansible.builtin.script: "{{ python_code }}"
