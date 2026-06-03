@@ -6,7 +6,6 @@
   tasks:
     - ansible.builtin.shell: "{{ code }}"
       when: code is defined
-      delegate_to: 127.0.0.1
       register: stdout
 
     - ansible.builtin.debug:
